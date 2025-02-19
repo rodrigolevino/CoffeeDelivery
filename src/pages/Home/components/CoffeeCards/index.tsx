@@ -64,8 +64,8 @@ export function CoffeeCards({
     } else {
       handleSetCoffeesInCart(
         produce(coffeesInCart, (draft) => {
-          if (draft[changedCoffeeIndex].coffeeQuantity + coffeeQuantity > 99) {
-            draft[changedCoffeeIndex].coffeeQuantity = 99
+          if (draft[changedCoffeeIndex].coffeeQuantity + coffeeQuantity >= 9) {
+            draft[changedCoffeeIndex].coffeeQuantity = 9
           } else {
             draft[changedCoffeeIndex].coffeeQuantity += coffeeQuantity
           }

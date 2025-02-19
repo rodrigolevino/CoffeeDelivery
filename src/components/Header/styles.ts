@@ -18,6 +18,16 @@ export const HeaderContainer = styled.header`
     align-items: center;
     gap: 0.75rem;
   }
+
+  @media (max-width: 1135px) {
+    padding: 2rem;
+  }
+
+  @media (max-width: 375px) {
+    img {
+      width: 4.375rem;
+    }
+  }
 `
 
 export const Location = styled.div`
@@ -37,6 +47,18 @@ export const Location = styled.div`
 
   p {
     color: ${(props) => props.theme["purple-700"]};
+    font-size: 0.875rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 375px) {
+    svg {
+      width: 20px;
+    }
+
+    p{
+      font-size: 0.8rem;
+    }
   }
 `
 

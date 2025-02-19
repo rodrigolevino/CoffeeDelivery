@@ -10,6 +10,20 @@ export const SuccessContainer = styled.div`
   align-items: end;
   justify-content: space-between;
 
+  @media (max-width: 1135px) {
+    justify-content: center;
+    grid-template-columns: auto;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 565px) {
+    padding: 0 1rem;
+
+    img {
+      width: 100%;
+    }
+  }
 `
 
 export const DeliveryContainer = styled.div`
@@ -52,6 +66,10 @@ export const DeliveryContainer = styled.div`
         border-box;
     mask-composite: exclude;
     border-radius: 6px 36px;
+
+    @media (max-width: 565px) {
+      min-width: 0;
+    }
   }
 `
 

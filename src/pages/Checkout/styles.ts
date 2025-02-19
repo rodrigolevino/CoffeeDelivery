@@ -28,6 +28,22 @@ export const CheckoutContainer = styled.div`
     line-height: 1.3;
     color: ${(props) => props.theme["gray-800"]};
   }
+
+  @media (max-width: 1135px) {
+    form {
+      flex-direction: column;
+    }
+
+    aside {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 670px) {
+    aside {
+      align-items: center;
+    }
+  }
 `
 
 export const SelectedCoffees = styled.div`
@@ -40,6 +56,30 @@ export const SelectedCoffees = styled.div`
 
   border-radius: 6px 44px;
   padding: 2.5rem;
+
+  @media (max-width: 1135px) {
+    width: 100%;
+  }
+
+  @media (max-width: 670px) {
+    width: 28rem;
+  }
+
+  @media (max-width: 465px) {
+    width: 25rem;
+  }
+
+  @media (max-width: 425px) {
+    width: 23rem;
+  }
+
+  @media (max-width: 390px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 345px) {
+    width: 18rem;
+  }
 `
 
 export const CoffeeInCheckout = styled.div`
@@ -62,6 +102,15 @@ export const CoffeeInCheckout = styled.div`
 
     position: absolute;
     right: 0.25rem;
+
+    @media (max-width: 425px) {
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 345px) {
+      right: 0;
+      font-size: 0.8rem;
+    }
   }
 `
 
@@ -74,6 +123,18 @@ export const CoffeeInfos = styled.div`
     color: ${(props) => props.theme["gray-800"]};
     font-size: 1rem;
     line-height: 1.3;
+
+    @media (max-width: 425px) {
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 390px) {
+      max-width: 100px;
+    }
+
+    @media (max-width: 345px) {
+      font-size: 0.8rem;
+    }
   }
 `
 
@@ -96,10 +157,22 @@ export const CoffeeActions = styled.div`
     border-radius: 6px;
     padding: 0.5rem;
 
+    @media (max-width: 345px) {
+      width: 4rem;
+      font-size: 0.875rem;
+    }
+
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
+    }
+  }
+
+  button svg {
+    @media (max-width: 345px) {
+      width: 14px;
+      height: 14px;
     }
   }
 `
@@ -127,6 +200,10 @@ export const RemoveButton = styled.button`
 
   &:hover {
     background: ${(props) => props.theme["gray-500"]};
+  }
+
+  @media (max-width: 345px) {
+    font-size: 0.6rem;
   }
 `
 
@@ -194,6 +271,10 @@ export const FormContainer = styled.div`
   justify-content: center;
   gap: 0.75rem;
 
+  @media (max-width: 670px) {
+    align-items: center;
+  }
+
   &::before {
     content: "Complete seu pedido";
     font-family: "baloo 2", sans-serif;
@@ -215,6 +296,26 @@ export const FormsContainerBase = styled.div`
   gap: 2rem;
 
   width: 100%;
+
+  @media (max-width: 670px) {
+    width: 28rem;
+  }
+
+  @media (max-width: 465px) {
+    width: 25rem;
+  }
+
+  @media (max-width: 425px) {
+    width: 23rem;
+  }
+
+  @media (max-width: 390px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 345px) {
+    width: 18rem;
+  }
 
   span {
     display: flex;
@@ -267,6 +368,14 @@ export const MainAdressForm = styled.main`
     font-size: 0.875rem;
     line-height: 1.3;
 
+    @media (max-width: 670px) {
+      width: 100%;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 0.75rem;
+    }
+
     &:focus {
       box-shadow: 0 0 0 1px ${(props) => props.theme["yellow-700"]};
     }
@@ -280,6 +389,38 @@ export const MainAdressForm = styled.main`
     display: grid;
     grid-template-columns: 12.5rem 17.25rem 3.75rem;
     gap: 0.75rem;
+
+    @media (max-width: 670px) {
+      grid-template-columns: 8.125rem 10.95rem 1fr;
+      gap: 0.4875rem;
+    }
+
+    @media (max-width: 465px) {
+      grid-template-columns: 7rem 9rem 1fr;
+    }
+
+    @media (max-width: 425px) {
+      grid-template-columns: 6rem 8rem 1fr;
+    }
+
+    @media (max-width: 390px) {
+      grid-template-rows: auto 1fr;
+      grid-template-columns: 4fr 1fr;
+      gap: 1rem 0.4875rem;
+    }
+  }
+
+  #cidadeInput {
+    @media (max-width: 390px) {
+      grid-column: span 2;
+    }
+  }
+
+  #bairroInput {
+    @media (max-width: 390px) {
+      grid-column: 1;
+      grid-row: 2;
+    }
   }
 `
 
@@ -287,10 +428,43 @@ export const ComplementAndNumberInputs = styled.div`
   display: grid;
   grid-template-columns: 12.5rem 1fr;
   gap: 0.75rem;
+
+  @media (max-width: 670px) {
+    grid-template-columns: 8.125rem 1fr;
+    gap: 0.4875rem;
+  }
+
+  @media (max-width: 465px) {
+    grid-template-columns: 7rem 1fr;
+  }
+
+  @media (max-width: 425px) {
+    grid-template-columns: 6rem 1fr;
+  }
+
+  @media (max-width: 390px) {
+    grid-template-columns: 5rem 1fr;
+  }
 `
 
 export const CEPInput = styled.input`
   max-width: 200px;
+
+  @media (max-width: 670px) {
+    max-width: 8.125rem;
+  }
+
+  @media (max-width: 465px) {
+    max-width: 7rem;
+  }
+
+  @media (max-width: 425px) {
+    max-width: 6rem;
+  }
+
+  @media (max-width: 390px) {
+    max-width: 5rem;
+  }
 `
 
 export const ComplementInputContainer = styled.div`
@@ -330,6 +504,10 @@ export const ComplementInputContainer = styled.div`
     line-height: 1.3;
     color: ${(props) => props.theme["gray-600"]};
     font-style: italic;
+
+    @media (max-width: 425px) {
+      font-size: 0.625rem;
+    }
   }
 `
 
@@ -343,6 +521,10 @@ export const MethodsToPay = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.75rem;
+
+  @media (max-width: 670px) {
+    grid-template-columns: auto;
+  }
 
   input:checked + label {
     background-color: ${(props) => props.theme["purple-300"]};

@@ -34,9 +34,46 @@ export const IntroContainer = styled.div`
       order: -1;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       text-align: center;
     }
+  }
+
+  @media (max-width: 610px) {
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 470px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 0.85rem;
+    }
+
+    img {
+      width: 22.3125rem;
+    }
+
+    padding: 2.5rem 0.625rem;
+    gap: 3.609375rem;
+  }
+
+  @media (max-width: 375px) {
+    img {
+      width: 19rem;
+    }
+
+    gap: 2.5rem;
+    padding: 1rem 0.625rem;
   }
 `
 
@@ -58,6 +95,10 @@ export const IntroContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4.125rem;
+
+  @media (max-width: 375px) {
+    gap: 2.5rem;
+  }
 `
 
 const ITENS_COLORS = {
@@ -76,6 +117,11 @@ export const ItensContainer = styled.div`
   grid-template-columns: auto auto;
   gap: 1.25rem 2.5rem;
   max-width: 567px;
+  justify-content: center;
+
+  @media (max-width: 610px) {
+    grid-template-columns: auto;
+  }
 `
 
 
@@ -88,7 +134,7 @@ export const IntroItens = styled.div<ItensProps>`
   gap: 0.75rem;
 
   div {
-    background: ${props => props.theme[ITENS_COLORS[props.$itemColor]]};
+    background: ${(props) => props.theme[ITENS_COLORS[props.$itemColor]]};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,7 +145,11 @@ export const IntroItens = styled.div<ItensProps>`
   }
 
   svg {
-    color: ${(props) => props.theme['gray-100']};
+    color: ${(props) => props.theme["gray-100"]};
+  }
+
+  @media (max-width: 375px) {
+    font-size: 0.875rem;
   }
 `
 
@@ -110,10 +160,28 @@ export const CoffeeContainer = styled.div`
   margin-bottom: 10rem;
 
   h1 {
-    color: ${props => props.theme["gray-800"]};
+    color: ${(props) => props.theme["gray-800"]};
     font-size: 2rem;
     line-height: 1.3;
     font-weight: 800;
     margin-bottom: 3.375rem;
+
+    @media (max-width: 1135px) {
+      max-width: 848px;
+      margin: auto;
+      margin-bottom: 3.375rem;
+    }
+
+    @media (max-width: 870px) {
+      max-width: 592px;
+      margin: auto;
+      margin-bottom: 3.375rem;
+    }
+
+    @media (max-width: 610px) {
+      max-width: 256px;
+      margin: auto;
+      margin-bottom: 3.375rem;
+    }
   }
 `

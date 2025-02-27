@@ -97,7 +97,7 @@ export function CoffeeCards({
               min={1}
               value={coffeeQuantity}
               onChange={() => {}}
-              disabled={true}
+              readOnly
             />
             <button onClick={handleIncreaseQuantity}>
               <Plus weight="bold" />
